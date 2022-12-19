@@ -244,18 +244,18 @@ def error():
 	back()
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
-	print(f'>> 1.Results {h}OK{x} you ')
-	print(f'>> 2. Results {k}CP{x} you ')
-	print('>> 3. Return	')
-	kz = input(f'\n>> Choose : ')
+	print(f'>> 1. Hasil {h}OK{x} Anda ')
+	print(f'>> 2. Hasil {k}CP{x} Anda ')
+	print('>> 3. Kembali	')
+	kz = input(f'\n>> Pilih : ')
 	if kz in ['2']:
 		try:vin = os.listdir('CP')
 		except FileNotFoundError:
-			print('>> File Not Found ')
+			print('>> File Tidak Di Temukan ')
 			time.sleep(3)
 			back()
 		if len(vin)==0:
-			print('>> You Have No CP Result ')
+			print('>> Anda Tidak Memiliki Hasil CP ')
 			time.sleep(2)
 			back()
 		else:
@@ -276,11 +276,11 @@ def result():
 			geeh = input('\n>> Pilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				print('>> Choose the Right Cock ')
+				print('>> Pilih Yang Bener Kontol ')
 				back()
 			try:lin = open('CP/'+geh,'r').read().splitlines()
 			except:
-				print('>> File Not Found ')
+				print('>> File Tidak Di Temukan ')
 				time.sleep(2)
 				back()
 			nocp=0
@@ -289,16 +289,16 @@ def result():
 				print(f'{x}>> {k}{cpkuni[0]}|{cpkuni[1]}')
 				nocp +=1
 			print('')
-			input(f'{x}[{m} Click Enter{x} ]')
+			input(f'{x}[{m} Klik Enter{x} ]')
 			back()
 	elif kz in ['1']:
 		try:vin = os.listdir('OK')
 		except FileNotFoundError:
-			print('>> File Not Found ')
+			print('>> File Tidak Di Temukan ')
 			time.sleep(2)
 			back()
 		if len(vin)==0:
-			print(' You Don't Have Files OK ')
+			print('>> Anda Tidak Mempunyai File OK ')
 			time.sleep(2)
 			back()
 		else:
@@ -319,11 +319,11 @@ def result():
 			geeh = input(f'\nPilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				print('>> Choose the Right Cock ')
+				print('>> Pilih Yang Bener Kontol ')
 				back()
 			try:lin = open('OK/'+geh,'r').read().splitlines()
 			except:
-				print('>> File Not Found')
+				print('>> File Tidak Di Temukan ')
 				time.sleep(2)
 				back()
 			nocp=0
@@ -338,7 +338,7 @@ def result():
 	elif kz in ['3']:
 		back()
 	else:
-		print('>> Choose the Right Cock ')
+		print('>> Pilih Yang Bener Kontol ')
 		back()
 #-------------------[ CRACK-PUBLIK ]----------------#
 def dump_massal():
@@ -348,9 +348,9 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		jum = int(input('>> How many targets do you want ? : '))
+		jum = int(input('>> Mau Berapa Target Njing ? : '))
 	except ValueError:
-		print('>> Enter the Dog's Number Instead of the Letter f ')
+		print('>> Masukkan Angka Anjing, Malah Huruff ')
 		exit()
 	if jum<1 or jum>100:
 		print('>> Gagal Dump Idz ')
@@ -359,7 +359,7 @@ def dump_massal():
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		kl = input('>> Enter Idz Yang Into'+str(yz)+' : ')
+		kl = input('>> Masukkan Idz Yang Ke '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -377,7 +377,7 @@ def dump_massal():
 			exit()
 	try:
 		print('')
-		print(f'>> Total Idz Collected🔥{h}'+str(len(id)))
+		print(f'>> Total Idz Yang Terkumpul🔥{h}'+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
